@@ -3,7 +3,12 @@
     "addons": {},
     "decorators": {},
     "layouts": {},
-    "plugins": {},
+    "plugins": {
+      "FamilyTransformation": {
+        "src": "src/plugins/FamilyTransformation",
+        "test": "test/plugins/FamilyTransformation"
+      }
+    },
     "routers": {},
     "seeds": {
       "SimpleER": {
