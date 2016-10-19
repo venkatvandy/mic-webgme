@@ -1,0 +1,18 @@
+[
+    "name :FCO ,path :/1 , nbrOfChildren :0 , Base :null",
+    "name :Subject_attr_Primary ,path :/Bf , nbrOfChildren :0 , Base :[object Object]",
+    "name :Student_study_Relation ,path :/H , nbrOfChildren :0 , Base :[object Object]",
+    "name :Student_attr_Primary ,path :/R , nbrOfChildren :0 , Base :[object Object]",
+    "name :Subject_attr ,path :/V , nbrOfChildren :0 , Base :[object Object]",
+    "name :Language ,path :/j , nbrOfChildren :8 , Base :[object Object]",
+    "name :Relationship ,path :/j/4 , nbrOfChildren :0 , Base :[object Object]",
+    "name :Folder ,path :/j/B , nbrOfChildren :0 , Base :[object Object]",
+    "name :Subject ,path :/j/L , nbrOfChildren :2 , Base :[object Object]",
+    "name :Student ,path :/j/b , nbrOfChildren :4 , Base :[object Object]",
+    "name :ER ,path :/j/g , nbrOfChildren :0 , Base :[object Object]",
+    "name :Entity ,path :/j/m , nbrOfChildren :0 , Base :[object Object]",
+    "name :Studies ,path :/j/z , nbrOfChildren :0 , Base :[object Object]",
+    "name :RelationshipPointer ,path :/k , nbrOfChildren :0 , Base :[object Object]",
+    "name :Student_attr ,path :/t , nbrOfChildren :0 , Base :[object Object]",
+    "name :Attr_base ,path :/y , nbrOfChildren :0 , Base :[object Object]"
+]

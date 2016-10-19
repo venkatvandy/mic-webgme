@@ -67,27 +67,27 @@ define([
         //self.logger.debug('This is a debug message.');
         //self.logger.info('This is an info message.');
         //self.logger.warn('This is a warning message.');
-        self.logger.error('This is an entry message.');
+        //self.logger.error('This is an entry message.');
 
         // Using the coreAPI to make changes.
 
         /*nodeObject = self.activeNode;1
 
-        self.core.setAttribute(nodeObject, 'name', 'My new obj');
-        self.core.setRegistry(nodeObject, 'position', {x: 70, y: 70});*/
+         self.core.setAttribute(nodeObject, 'name', 'My new obj');
+         self.core.setRegistry(nodeObject, 'position', {x: 70, y: 70});*/
 
 
         // This will save the changes. If you don't want to save;
         // exclude self.save and call callback directly from this scope.
         /*self.save('MiniProject2 updated model.')
-            .then(function () {
-                self.result.setSuccess(true);
-                callback(null, self.result);
-            })
-            .catch(function (err) {
-                // Result success is false at invocation.
-                callback(err, self.result);
-            });*/
+         .then(function () {
+         self.result.setSuccess(true);
+         callback(null, self.result);
+         })
+         .catch(function (err) {
+         // Result success is false at invocation.
+         callback(err, self.result);
+         });*/
 
         self.extractDataModel(self.rootNode)
             .then(function (nodes) {
@@ -100,12 +100,13 @@ define([
                 artifact = self.blobClient.createArtifact('data');
                 self.logger.info('**************Extracted dataModel****************', dataModelStr);
 
+
                 var array_new = self.toArray(nodes);
                 var array_new_str = JSON.stringify(array_new, null, 4);
                 self.logger.info('*************Array Info*************',array_new_str);
 
-                return artifact.addFile('tree.json',dataModelStr);
-                //return artifact.addFile('meta.json',array_new_str);
+                return artifact.addFiles({'tree.json':dataModelStr,'meta.json':array_new_str});
+
 
             })
             .then(function (fileHash) {
@@ -143,6 +144,7 @@ define([
             name,
             node,
             nbrOfChildren,
+            base,
             arr= [];
 
         for (path in nodes) {
@@ -158,6 +160,9 @@ define([
 
                 nbrOfChildren = self.core.getChildrenPaths(node).length;
                 details = details.concat(' , nbrOfChildren :',nbrOfChildren);
+
+                base = self.core.getBase(node);
+                details = details.concat(' , Base :',base);
                 arr.push(details);
 
                 //self.logger.info(arr);
@@ -174,17 +179,18 @@ define([
             attr,
             i,
             metaNode,
+
             dataModel = {
-            EntityRelationship: {
-                name: '',
-                children: [],
-                isMeta: '',
-                metaType: '',
-                guard: '',
-                src: '',
-                dst: ''
-            }
-        };
+                    rel_id: '',
+                    name: '',
+                    children: [],
+                    isMeta: '',
+                    metaType: '',
+                    guard: '',
+                    src: '',
+                    dst: ''
+            };
+
 
 
         indent = indent || '';
@@ -192,29 +198,36 @@ define([
         childrenPaths = self.core.getChildrenPaths(root);
 
         self.logger.info(indent,'Name :',self.core.getAttribute(root, 'name'),',');
-        dataModel.EntityRelationship.name = self.core.getAttribute(root, 'name');
+        dataModel.rel_id = self.core.getRelid(root);
+        dataModel.name = self.core.getAttribute(root, 'name');
+
+
         if(root!=self.rootNode) {
             if (self.getMetaType(root) === root) {
                 self.logger.info(indent, 'isMeta : true,');
-                dataModel.EntityRelationship.isMeta = 'true';
+                dataModel.isMeta = 'true';
             }
             else {
                 self.logger.info(indent, 'isMeta : false,');
-                dataModel.EntityRelationship.isMeta = 'false';
+                dataModel.isMeta = 'false';
             }
 
             metaNode = self.getMetaType(root);
             self.logger.info(indent, 'Meta-type: ', self.core.getAttribute(metaNode, 'name'));
-            dataModel.EntityRelationship.metaType = self.core.getAttribute(metaNode, 'name');
+            dataModel.metaType = self.core.getAttribute(metaNode, 'name');
 
 
-            if (self.isMetaTypeOf(root, self.META.Transition)) {
+            if (self.isMetaTypeOf(root, self.META.RelationshipPointer) || self.isMetaTypeOf(root,self.META.Student_study_Relation)
+                || self.isMetaTypeOf(root, self.META.Student_attr) || self.isMetaTypeOf(root, self.META.Student_attr_Primary)
+                || self.isMetaTypeOf(root, self.META.Subject_attr)|| self.isMetaTypeOf(root, self.META.Subject_attr_Primary)) {
                 attr = self.core.getAttribute(root, 'guard');
                 self.logger.info(indent, 'guard:', attr, ',');
-                dataModel.EntityRelationship.guard = attr;
+                dataModel.guard = attr;
 
                 var srcPath = self.core.getPointerPath(root, 'src');
                 var dstPath = self.core.getPointerPath(root, 'dst');
+
+
 
                 // Pathes are always non-empty strings (expect for the rootNode which
                 // cannot be the target of a pointer) and non-empty strings are "truthy"..
@@ -222,9 +235,9 @@ define([
                     var srcNode = nodes[srcPath];
                     var dstNode = nodes[dstPath];
                     self.logger.info(indent, 'src: ', self.core.getAttribute(srcNode, 'name'), ',');
-                    dataModel.EntityRelationship.src = self.core.getAttribute(srcNode, 'name');
+                    dataModel.src = self.core.getAttribute(srcNode, 'name');
                     self.logger.info(indent, 'dst: ', self.core.getAttribute(dstNode, 'name'), ',');
-                    dataModel.EntityRelationship.dst = self.core.getAttribute(dstNode, 'name');
+                    dataModel.dst = self.core.getAttribute(dstNode, 'name');
                 }
             }
         }
@@ -235,7 +248,7 @@ define([
             childNode = nodes[childrenPaths[i]];
             if(childrenPaths.length>0)
                 self.logger.info(indent,' {');
-            dataModel.EntityRelationship.children.push(self.printChildrenRec(childNode, nodes, indent + '  '));
+            dataModel.children.push(self.printChildrenRec(childNode, nodes, indent + '  '));
             self.logger.info(indent,'}');
         }
         return dataModel;
