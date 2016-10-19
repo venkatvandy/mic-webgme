@@ -1,631 +1,564 @@
 {
-    "rel_id": null,
     "name": "My new obj",
-    "children": [
-        {
-            "rel_id": "1",
+    "children": {
+        "0": {
             "name": "FCO",
-            "children": [],
+            "children": {},
             "isMeta": "true",
             "metaType": "FCO",
             "guard": "",
             "src": "",
             "dst": ""
         },
-        {
-            "rel_id": "6",
+        "1": {
             "name": "Student",
-            "children": [
-                {
-                    "rel_id": "X",
+            "children": {
+                "0": {
                     "name": "Student_attr",
-                    "children": [],
+                    "children": {},
                     "isMeta": "false",
                     "metaType": "Student_attr",
                     "src": "",
                     "dst": ""
                 },
-                {
-                    "rel_id": "D",
+                "1": {
                     "name": "Student_attr",
-                    "children": [],
+                    "children": {},
                     "isMeta": "false",
                     "metaType": "Student_attr",
                     "src": "",
                     "dst": ""
                 },
-                {
-                    "rel_id": "w",
+                "2": {
                     "name": "Student_attr",
-                    "children": [],
+                    "children": {},
                     "isMeta": "false",
                     "metaType": "Student_attr",
                     "src": "",
                     "dst": ""
                 },
-                {
-                    "rel_id": "W",
+                "3": {
                     "name": "Student_attr",
-                    "children": [],
+                    "children": {},
                     "isMeta": "false",
                     "metaType": "Student_attr",
                     "src": "",
                     "dst": ""
                 },
-                {
-                    "rel_id": "pY",
+                "4": {
                     "name": "ID",
-                    "children": [],
+                    "children": {},
                     "isMeta": "false",
                     "metaType": "Student_attr_Primary",
                     "src": "",
                     "dst": ""
                 },
-                {
-                    "rel_id": "yR",
+                "5": {
                     "name": "Name",
-                    "children": [],
+                    "children": {},
                     "isMeta": "false",
                     "metaType": "Student_attr",
                     "src": "",
                     "dst": ""
                 },
-                {
-                    "rel_id": "Ls",
+                "6": {
                     "name": "Phone",
-                    "children": [],
+                    "children": {},
                     "isMeta": "false",
                     "metaType": "Student_attr",
                     "src": "",
                     "dst": ""
                 },
-                {
-                    "rel_id": "Ce",
+                "7": {
                     "name": "BloodGroup",
-                    "children": [],
+                    "children": {},
                     "isMeta": "false",
                     "metaType": "Student_attr",
                     "src": "",
                     "dst": ""
                 }
-            ],
+            },
             "isMeta": "false",
             "metaType": "Student",
             "guard": "",
             "src": "",
             "dst": ""
         },
-        {
-            "rel_id": "P",
+        "2": {
             "name": "Phone",
-            "children": [],
+            "children": {},
             "isMeta": "false",
             "metaType": "FCO",
             "guard": "",
             "src": "",
             "dst": ""
         },
-        {
-            "rel_id": "K",
+        "3": {
             "name": "Title",
-            "children": [],
+            "children": {},
             "isMeta": "false",
             "metaType": "FCO",
             "guard": "",
             "src": "",
             "dst": ""
         },
-        {
-            "rel_id": "y",
+        "4": {
             "name": "Attr_base",
-            "children": [],
+            "children": {},
             "isMeta": "true",
             "metaType": "Attr_base",
             "guard": "",
             "src": "",
             "dst": ""
         },
-        {
-            "rel_id": "t",
+        "5": {
             "name": "Student_attr",
-            "children": [],
+            "children": {},
             "isMeta": "true",
             "metaType": "Student_attr",
             "src": "",
             "dst": ""
         },
-        {
-            "rel_id": "V",
+        "6": {
             "name": "Subject_attr",
-            "children": [],
+            "children": {},
             "isMeta": "true",
             "metaType": "Subject_attr",
             "src": "",
             "dst": ""
         },
-        {
-            "rel_id": "R",
+        "7": {
             "name": "Student_attr_Primary",
-            "children": [],
+            "children": {},
             "isMeta": "true",
             "metaType": "Student_attr_Primary",
             "src": "",
             "dst": ""
         },
-        {
-            "rel_id": "Bf",
+        "8": {
             "name": "Subject_attr_Primary",
-            "children": [],
+            "children": {},
             "isMeta": "true",
             "metaType": "Subject_attr_Primary",
             "src": "",
             "dst": ""
         },
-        {
-            "rel_id": "j",
+        "9": {
             "name": "Language",
-            "children": [
-                {
-                    "rel_id": "4",
+            "children": {
+                "0": {
                     "name": "Relationship",
-                    "children": [],
+                    "children": {},
                     "isMeta": "true",
                     "metaType": "Relationship",
                     "guard": "",
                     "src": "",
                     "dst": ""
                 },
-                {
-                    "rel_id": "b",
+                "1": {
                     "name": "Student",
-                    "children": [
-                        {
-                            "rel_id": "pY",
+                    "children": {
+                        "0": {
                             "name": "ID",
-                            "children": [],
+                            "children": {},
                             "isMeta": "false",
                             "metaType": "Student_attr_Primary",
                             "src": "",
                             "dst": ""
                         },
-                        {
-                            "rel_id": "yR",
+                        "1": {
                             "name": "Name",
-                            "children": [],
+                            "children": {},
                             "isMeta": "false",
                             "metaType": "Student_attr",
                             "src": "",
                             "dst": ""
                         },
-                        {
-                            "rel_id": "Ls",
+                        "2": {
                             "name": "Phone",
-                            "children": [],
+                            "children": {},
                             "isMeta": "false",
                             "metaType": "Student_attr",
                             "src": "",
                             "dst": ""
                         },
-                        {
-                            "rel_id": "Ce",
+                        "3": {
                             "name": "BloodGroup",
-                            "children": [],
+                            "children": {},
                             "isMeta": "false",
                             "metaType": "Student_attr",
                             "src": "",
                             "dst": ""
                         }
-                    ],
+                    },
                     "isMeta": "true",
                     "metaType": "Student",
                     "guard": "",
                     "src": "",
                     "dst": ""
                 },
-                {
-                    "rel_id": "z",
+                "2": {
                     "name": "Studies",
-                    "children": [],
+                    "children": {},
                     "isMeta": "true",
                     "metaType": "Studies",
                     "guard": "",
                     "src": "",
                     "dst": ""
                 },
-                {
-                    "rel_id": "L",
+                "3": {
                     "name": "Subject",
-                    "children": [
-                        {
-                            "rel_id": "gP",
+                    "children": {
+                        "0": {
                             "name": "ID",
-                            "children": [],
+                            "children": {},
                             "isMeta": "false",
                             "metaType": "Subject_attr_Primary",
                             "src": "",
                             "dst": ""
                         },
-                        {
-                            "rel_id": "xM",
+                        "1": {
                             "name": "Title",
-                            "children": [],
+                            "children": {},
                             "isMeta": "false",
                             "metaType": "Subject_attr",
                             "src": "",
                             "dst": ""
                         }
-                    ],
+                    },
                     "isMeta": "true",
                     "metaType": "Subject",
                     "guard": "",
                     "src": "",
                     "dst": ""
                 },
-                {
-                    "rel_id": "m",
+                "4": {
                     "name": "Entity",
-                    "children": [],
+                    "children": {},
                     "isMeta": "true",
                     "metaType": "Entity",
                     "guard": "",
                     "src": "",
                     "dst": ""
                 },
-                {
-                    "rel_id": "g",
+                "5": {
                     "name": "ER",
-                    "children": [],
+                    "children": {},
                     "isMeta": "true",
                     "metaType": "ER",
                     "guard": "",
                     "src": "",
                     "dst": ""
                 },
-                {
-                    "rel_id": "B",
+                "6": {
                     "name": "Folder",
-                    "children": [],
+                    "children": {},
                     "isMeta": "true",
                     "metaType": "Folder",
                     "guard": "",
                     "src": "",
                     "dst": ""
                 },
-                {
-                    "rel_id": "w",
+                "7": {
                     "name": "Name",
-                    "children": [],
+                    "children": {},
                     "isMeta": "false",
                     "metaType": "FCO",
                     "guard": "",
                     "src": "",
                     "dst": ""
                 }
-            ],
+            },
             "isMeta": "true",
             "metaType": "Language",
             "guard": "",
             "src": "",
             "dst": ""
         },
-        {
-            "rel_id": "Y",
+        "10": {
             "name": "Example",
-            "children": [
-                {
-                    "rel_id": "N",
+            "children": {
+                "0": {
                     "name": "My new obj",
-                    "children": [
-                        {
-                            "rel_id": "1",
+                    "children": {
+                        "0": {
                             "name": "",
-                            "children": [],
+                            "children": {},
                             "isMeta": "false",
                             "metaType": "Subject_attr_Primary",
                             "src": "ID",
                             "dst": "ID"
                         },
-                        {
-                            "rel_id": "2",
+                        "1": {
                             "name": "ID",
-                            "children": [],
+                            "children": {},
                             "isMeta": "false",
                             "metaType": "Subject_attr_Primary",
                             "src": "",
                             "dst": ""
                         },
-                        {
-                            "rel_id": "4",
+                        "2": {
                             "name": "Phone",
-                            "children": [],
+                            "children": {},
                             "isMeta": "false",
                             "metaType": "Student_attr",
                             "src": "",
                             "dst": ""
                         },
-                        {
-                            "rel_id": "5",
+                        "3": {
                             "name": "RelationshipPointer",
-                            "children": [],
+                            "children": {},
                             "isMeta": "false",
                             "metaType": "RelationshipPointer",
                             "src": "Student",
                             "dst": "Teaches"
                         },
-                        {
-                            "rel_id": "6",
+                        "4": {
                             "name": "Teaches",
-                            "children": [],
+                            "children": {},
                             "isMeta": "false",
                             "metaType": "Studies",
                             "guard": "",
                             "src": "",
                             "dst": ""
                         },
-                        {
-                            "rel_id": "D",
+                        "5": {
                             "name": "",
-                            "children": [],
+                            "children": {},
                             "isMeta": "false",
                             "metaType": "Student_attr_Primary",
                             "src": "ID",
                             "dst": "ID"
                         },
-                        {
-                            "rel_id": "H",
+                        "6": {
                             "name": "",
-                            "children": [],
+                            "children": {},
                             "isMeta": "false",
                             "metaType": "Subject_attr",
                             "src": "Title",
                             "dst": "Title"
                         },
-                        {
-                            "rel_id": "k",
+                        "7": {
                             "name": "Student_study_Relation",
-                            "children": [],
+                            "children": {},
                             "isMeta": "false",
                             "metaType": "Student_study_Relation",
                             "src": "Teaches",
                             "dst": "Subject"
                         },
-                        {
-                            "rel_id": "m",
+                        "8": {
                             "name": "Studies",
-                            "children": [],
+                            "children": {},
                             "isMeta": "false",
                             "metaType": "Studies",
                             "guard": "",
                             "src": "",
                             "dst": ""
                         },
-                        {
-                            "rel_id": "w",
+                        "9": {
                             "name": "Subject",
-                            "children": [
-                                {
-                                    "rel_id": "gP",
+                            "children": {
+                                "0": {
                                     "name": "ID",
-                                    "children": [],
+                                    "children": {},
                                     "isMeta": "false",
                                     "metaType": "Subject_attr_Primary",
                                     "src": "",
                                     "dst": ""
                                 },
-                                {
-                                    "rel_id": "xM",
+                                "1": {
                                     "name": "Title",
-                                    "children": [],
+                                    "children": {},
                                     "isMeta": "false",
                                     "metaType": "Subject_attr",
                                     "src": "",
                                     "dst": ""
                                 }
-                            ],
+                            },
                             "isMeta": "false",
                             "metaType": "Subject",
                             "guard": "",
                             "src": "",
                             "dst": ""
                         },
-                        {
-                            "rel_id": "J",
+                        "10": {
                             "name": "Student_study_Relation",
-                            "children": [],
+                            "children": {},
                             "isMeta": "false",
                             "metaType": "Student_study_Relation",
                             "src": "Studies",
                             "dst": "Subject"
                         },
-                        {
-                            "rel_id": "G",
+                        "11": {
                             "name": "Student",
-                            "children": [
-                                {
-                                    "rel_id": "Ls",
+                            "children": {
+                                "0": {
                                     "name": "Phone",
-                                    "children": [],
+                                    "children": {},
                                     "isMeta": "false",
                                     "metaType": "Student_attr",
                                     "src": "",
                                     "dst": ""
                                 },
-                                {
-                                    "rel_id": "Ce",
+                                "1": {
                                     "name": "BloodGroup",
-                                    "children": [],
+                                    "children": {},
                                     "isMeta": "false",
                                     "metaType": "Student_attr",
                                     "src": "",
                                     "dst": ""
                                 },
-                                {
-                                    "rel_id": "pY",
+                                "2": {
                                     "name": "ID",
-                                    "children": [],
+                                    "children": {},
                                     "isMeta": "false",
                                     "metaType": "Student_attr_Primary",
                                     "src": "",
                                     "dst": ""
                                 },
-                                {
-                                    "rel_id": "yR",
+                                "3": {
                                     "name": "Name",
-                                    "children": [],
+                                    "children": {},
                                     "isMeta": "false",
                                     "metaType": "Student_attr",
                                     "src": "",
                                     "dst": ""
                                 }
-                            ],
+                            },
                             "isMeta": "false",
                             "metaType": "Student",
                             "guard": "",
                             "src": "",
                             "dst": ""
                         },
-                        {
-                            "rel_id": "i",
+                        "12": {
                             "name": "RelationshipPointer",
-                            "children": [],
+                            "children": {},
                             "isMeta": "false",
                             "metaType": "RelationshipPointer",
                             "src": "Student",
                             "dst": "Studies"
                         },
-                        {
-                            "rel_id": "Y",
+                        "13": {
                             "name": "",
-                            "children": [],
+                            "children": {},
                             "isMeta": "false",
                             "metaType": "Student_study_Relation",
                             "src": "Studies",
                             "dst": "Subject"
                         },
-                        {
-                            "rel_id": "x",
+                        "14": {
                             "name": "Name",
-                            "children": [],
+                            "children": {},
                             "isMeta": "false",
                             "metaType": "Student_attr",
                             "src": "",
                             "dst": ""
                         },
-                        {
-                            "rel_id": "S",
+                        "15": {
                             "name": "Title",
-                            "children": [],
+                            "children": {},
                             "isMeta": "false",
                             "metaType": "Subject_attr",
                             "src": "",
                             "dst": ""
                         },
-                        {
-                            "rel_id": "W",
+                        "16": {
                             "name": "BloodGroup",
-                            "children": [],
+                            "children": {},
                             "isMeta": "false",
                             "metaType": "Student_attr",
                             "src": "",
                             "dst": ""
                         },
-                        {
-                            "rel_id": "c",
+                        "17": {
                             "name": "",
-                            "children": [],
+                            "children": {},
                             "isMeta": "false",
                             "metaType": "Student_study_Relation",
                             "src": "Teaches",
                             "dst": "Subject"
                         },
-                        {
-                            "rel_id": "N",
+                        "18": {
                             "name": "ID",
-                            "children": [],
+                            "children": {},
                             "isMeta": "false",
                             "metaType": "Student_attr_Primary",
                             "src": "",
                             "dst": ""
                         },
-                        {
-                            "rel_id": "u",
+                        "19": {
                             "name": "",
-                            "children": [],
+                            "children": {},
                             "isMeta": "false",
                             "metaType": "Student_attr",
                             "src": "Name",
                             "dst": "Name"
                         },
-                        {
-                            "rel_id": "E",
+                        "20": {
                             "name": "",
-                            "children": [],
+                            "children": {},
                             "isMeta": "false",
                             "metaType": "Student_attr",
                             "src": "Phone",
                             "dst": "Phone"
                         },
-                        {
-                            "rel_id": "b",
+                        "21": {
                             "name": "",
-                            "children": [],
+                            "children": {},
                             "isMeta": "false",
                             "metaType": "Student_attr",
                             "src": "BloodGroup",
                             "dst": "BloodGroup"
                         }
-                    ],
+                    },
                     "isMeta": "false",
                     "metaType": "ER",
                     "guard": "",
                     "src": "",
                     "dst": ""
                 }
-            ],
+            },
             "isMeta": "false",
             "metaType": "Folder",
             "guard": "",
             "src": "",
             "dst": ""
         },
-        {
-            "rel_id": "k",
+        "11": {
             "name": "RelationshipPointer",
-            "children": [],
+            "children": {},
             "isMeta": "true",
             "metaType": "RelationshipPointer",
             "src": "",
             "dst": ""
         },
-        {
-            "rel_id": "H",
+        "12": {
             "name": "Student_study_Relation",
-            "children": [],
+            "children": {},
             "isMeta": "true",
             "metaType": "Student_study_Relation",
             "src": "",
             "dst": ""
         },
-        {
-            "rel_id": "w",
+        "13": {
             "name": "",
-            "children": [],
+            "children": {},
             "isMeta": "false",
             "metaType": "RelationshipPointer",
             "src": "",
             "dst": ""
         },
-        {
-            "rel_id": "L",
+        "14": {
             "name": "ID",
-            "children": [],
+            "children": {},
             "isMeta": "false",
             "metaType": "FCO",
             "guard": "",
             "src": "",
             "dst": ""
         }
-    ],
+    },
     "isMeta": "",
     "metaType": "",
     "guard": "",
