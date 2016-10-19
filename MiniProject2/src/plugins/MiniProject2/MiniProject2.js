@@ -186,12 +186,9 @@ define([
                     },
                     isMeta: '',
                     metaType: '',
-                    guard: '',
                     src: '',
                     dst: ''
             };
-
-
 
         indent = indent || '';
 
@@ -218,9 +215,6 @@ define([
             if (self.isMetaTypeOf(root, self.META.RelationshipPointer) || self.isMetaTypeOf(root,self.META.Student_study_Relation)
                 || self.isMetaTypeOf(root, self.META.Student_attr) || self.isMetaTypeOf(root, self.META.Student_attr_Primary)
                 || self.isMetaTypeOf(root, self.META.Subject_attr)|| self.isMetaTypeOf(root, self.META.Subject_attr_Primary)) {
-                attr = self.core.getAttribute(root, 'guard');
-                self.logger.info(indent, 'guard:', attr, ',');
-                dataModel.guard = attr;
 
                 var srcPath = self.core.getPointerPath(root, 'src');
                 var dstPath = self.core.getPointerPath(root, 'dst');

@@ -6,7 +6,6 @@
             "children": {},
             "isMeta": "true",
             "metaType": "FCO",
-            "guard": "",
             "src": "",
             "dst": ""
         },
@@ -80,7 +79,6 @@
             },
             "isMeta": "false",
             "metaType": "Student",
-            "guard": "",
             "src": "",
             "dst": ""
         },
@@ -89,7 +87,6 @@
             "children": {},
             "isMeta": "false",
             "metaType": "FCO",
-            "guard": "",
             "src": "",
             "dst": ""
         },
@@ -98,7 +95,6 @@
             "children": {},
             "isMeta": "false",
             "metaType": "FCO",
-            "guard": "",
             "src": "",
             "dst": ""
         },
@@ -107,7 +103,6 @@
             "children": {},
             "isMeta": "true",
             "metaType": "Attr_base",
-            "guard": "",
             "src": "",
             "dst": ""
         },
@@ -151,7 +146,6 @@
                     "children": {},
                     "isMeta": "true",
                     "metaType": "Relationship",
-                    "guard": "",
                     "src": "",
                     "dst": ""
                 },
@@ -193,7 +187,6 @@
                     },
                     "isMeta": "true",
                     "metaType": "Student",
-                    "guard": "",
                     "src": "",
                     "dst": ""
                 },
@@ -202,7 +195,6 @@
                     "children": {},
                     "isMeta": "true",
                     "metaType": "Studies",
-                    "guard": "",
                     "src": "",
                     "dst": ""
                 },
@@ -228,7 +220,6 @@
                     },
                     "isMeta": "true",
                     "metaType": "Subject",
-                    "guard": "",
                     "src": "",
                     "dst": ""
                 },
@@ -237,7 +228,6 @@
                     "children": {},
                     "isMeta": "true",
                     "metaType": "Entity",
-                    "guard": "",
                     "src": "",
                     "dst": ""
                 },
@@ -246,7 +236,6 @@
                     "children": {},
                     "isMeta": "true",
                     "metaType": "ER",
-                    "guard": "",
                     "src": "",
                     "dst": ""
                 },
@@ -255,7 +244,6 @@
                     "children": {},
                     "isMeta": "true",
                     "metaType": "Folder",
-                    "guard": "",
                     "src": "",
                     "dst": ""
                 },
@@ -264,14 +252,12 @@
                     "children": {},
                     "isMeta": "false",
                     "metaType": "FCO",
-                    "guard": "",
                     "src": "",
                     "dst": ""
                 }
             },
             "isMeta": "true",
             "metaType": "Language",
-            "guard": "",
             "src": "",
             "dst": ""
         },
@@ -318,7 +304,6 @@
                             "children": {},
                             "isMeta": "false",
                             "metaType": "Studies",
-                            "guard": "",
                             "src": "",
                             "dst": ""
                         },
@@ -351,7 +336,6 @@
                             "children": {},
                             "isMeta": "false",
                             "metaType": "Studies",
-                            "guard": "",
                             "src": "",
                             "dst": ""
                         },
@@ -377,7 +361,6 @@
                             },
                             "isMeta": "false",
                             "metaType": "Subject",
-                            "guard": "",
                             "src": "",
                             "dst": ""
                         },
@@ -427,7 +410,6 @@
                             },
                             "isMeta": "false",
                             "metaType": "Student",
-                            "guard": "",
                             "src": "",
                             "dst": ""
                         },
@@ -514,14 +496,12 @@
                     },
                     "isMeta": "false",
                     "metaType": "ER",
-                    "guard": "",
                     "src": "",
                     "dst": ""
                 }
             },
             "isMeta": "false",
             "metaType": "Folder",
-            "guard": "",
             "src": "",
             "dst": ""
         },
@@ -554,14 +534,12 @@
             "children": {},
             "isMeta": "false",
             "metaType": "FCO",
-            "guard": "",
             "src": "",
             "dst": ""
         }
     },
     "isMeta": "",
     "metaType": "",
-    "guard": "",
     "src": "",
     "dst": ""
 }
