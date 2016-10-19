@@ -182,17 +182,15 @@ define([
 
             dataModel = {
                     name: '',
-                    children:{
-                    },
                     isMeta: '',
                     metaType: '',
-                    src: '',
-                    dst: ''
+                    children:{}
             };
 
         indent = indent || '';
 
         childrenPaths = self.core.getChildrenPaths(root);
+
 
         self.logger.info(indent,'Name :',self.core.getAttribute(root, 'name'),',');
         dataModel.name = self.core.getAttribute(root, 'name');
@@ -240,7 +238,7 @@ define([
             childNode = nodes[childrenPaths[i]];
             if(childrenPaths.length>0)
                 self.logger.info(indent,' {');
-            dataModel.children[i] = self.printChildrenRec(childNode, nodes, indent + '  ');
+            dataModel.children[self.core.getRelid(childNode)] = self.printChildrenRec(childNode, nodes, indent + '  ');
             self.logger.info(indent,'}');
         }
         return dataModel;
