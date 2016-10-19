@@ -181,9 +181,9 @@ define([
             metaNode,
 
             dataModel = {
-                    rel_id: '',
                     name: '',
-                    children: [],
+                    children:{
+                    },
                     isMeta: '',
                     metaType: '',
                     guard: '',
@@ -198,9 +198,7 @@ define([
         childrenPaths = self.core.getChildrenPaths(root);
 
         self.logger.info(indent,'Name :',self.core.getAttribute(root, 'name'),',');
-        dataModel.rel_id = self.core.getRelid(root);
         dataModel.name = self.core.getAttribute(root, 'name');
-
 
         if(root!=self.rootNode) {
             if (self.getMetaType(root) === root) {
@@ -248,7 +246,7 @@ define([
             childNode = nodes[childrenPaths[i]];
             if(childrenPaths.length>0)
                 self.logger.info(indent,' {');
-            dataModel.children.push(self.printChildrenRec(childNode, nodes, indent + '  '));
+            dataModel.children[i] = self.printChildrenRec(childNode, nodes, indent + '  ');
             self.logger.info(indent,'}');
         }
         return dataModel;
