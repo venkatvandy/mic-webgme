@@ -89,6 +89,7 @@ define([
          callback(err, self.result);
          });*/
 
+        //self.metaNodeInfo=[];
         self.extractDataModel(self.rootNode)
             .then(function (nodes) {
 
@@ -97,7 +98,7 @@ define([
                 var dataModelStr = JSON.stringify(dataModel, null, 4);
                 self.dataModel = dataModel;
 
-                artifact = self.blobClient.createArtifact('data');
+                artifact = self.blobClient.createArtifact('project-data');
                 self.logger.info('**************Extracted dataModel****************', dataModelStr);
 
 
@@ -145,27 +146,27 @@ define([
             node,
             nbrOfChildren,
             base,
-            arr= [];
+            i=0,
+            arr = []
 
         for (path in nodes) {
             node = nodes[path];
             if(self.getMetaType(node) === node)
             {
-                var details ='';
                 name = self.core.getAttribute(node,'name');
-                details = details.concat('name :',name);
 
                 path = self.core.getPath(node);
-                details = details.concat(' ,path :',path);
 
                 nbrOfChildren = self.core.getChildrenPaths(node).length;
-                details = details.concat(' , nbrOfChildren :',nbrOfChildren);
 
-                base = self.core.getBase(node);
-                details = details.concat(' , Base :',base);
-                arr.push(details);
+                base = self.core.getPointerPath(node, 'base');
+                if (base !== null) {
+                    base = self.core.getAttribute(nodes[base], 'name');
+                }
+                else
+                    base = "null";
 
-                //self.logger.info(arr);
+                arr.push({name: name , path: path, nbrOfChildren: nbrOfChildren , base:base});
             }
         }
         return arr;
@@ -191,22 +192,17 @@ define([
 
         childrenPaths = self.core.getChildrenPaths(root);
 
-
-        self.logger.info(indent,'Name :',self.core.getAttribute(root, 'name'),',');
         dataModel.name = self.core.getAttribute(root, 'name');
 
         if(root!=self.rootNode) {
             if (self.getMetaType(root) === root) {
-                self.logger.info(indent, 'isMeta : true,');
                 dataModel.isMeta = 'true';
             }
             else {
-                self.logger.info(indent, 'isMeta : false,');
                 dataModel.isMeta = 'false';
             }
 
             metaNode = self.getMetaType(root);
-            self.logger.info(indent, 'Meta-type: ', self.core.getAttribute(metaNode, 'name'));
             dataModel.metaType = self.core.getAttribute(metaNode, 'name');
 
 
@@ -224,22 +220,15 @@ define([
                 if (srcPath && dstPath) {
                     var srcNode = nodes[srcPath];
                     var dstNode = nodes[dstPath];
-                    self.logger.info(indent, 'src: ', self.core.getAttribute(srcNode, 'name'), ',');
                     dataModel.src = self.core.getAttribute(srcNode, 'name');
-                    self.logger.info(indent, 'dst: ', self.core.getAttribute(dstNode, 'name'), ',');
                     dataModel.dst = self.core.getAttribute(dstNode, 'name');
                 }
             }
         }
-        if(childrenPaths.length>0)
-            self.logger.info(indent,'Children');
 
         for (i = 0; i < childrenPaths.length; i += 1) {
             childNode = nodes[childrenPaths[i]];
-            if(childrenPaths.length>0)
-                self.logger.info(indent,' {');
             dataModel.children[self.core.getRelid(childNode)] = self.printChildrenRec(childNode, nodes, indent + '  ');
-            self.logger.info(indent,'}');
         }
         return dataModel;
     };
